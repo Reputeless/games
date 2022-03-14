@@ -8,7 +8,7 @@ void Main()
 	// 背景色を設定
 	Scene::SetBackground(ColorF{ 0.8, 0.9, 1.0 });
 
-	// 問題文のリスト
+	// 出題テキストのリスト
 	const Array<String> texts =
 	{
 		U"Practice makes perfect.",
