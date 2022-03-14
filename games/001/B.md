@@ -159,7 +159,7 @@ void Main()
 				.setLength(BallSpeedPerSec); // ボールの速さが BallSpeedPerSec になるよう、ベクトルの長さを調整
 		}
 
-		// 画面の底を越えたら
+		// 画面の底を越えたら（ゲームオーバーになったら）
 		if (SceneSize.y <= ball.y)
 		{
 			// ブロックの配列をリセット
