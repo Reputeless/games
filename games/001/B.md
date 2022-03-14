@@ -1,4 +1,4 @@
-# ブロックくずし
+# 再プレイ可能なブロックくずし
 
 ```cpp
 # include <Siv3D.hpp> // OpenSiv3D v0.6.3
@@ -157,6 +157,19 @@ void Main()
 			// パドルの中心からの距離に応じてはね返る方向（速度ベクトル）を変える
 			ballVelocity = Vec2{ (ball.x - paddle.center().x) * 10, -ballVelocity.y }
 				.setLength(BallSpeedPerSec); // ボールの速さが BallSpeedPerSec になるよう、ベクトルの長さを調整
+		}
+
+		// 画面の底を越えたら
+		if (SceneSize.y <= ball.y)
+		{
+			// ブロックの配列をリセット
+			bricks = MakeBricks();
+
+			// ボールをリセット
+			ball = MakeBall();
+
+			// ボールの速度をリセット
+			ballVelocity = MakeBallVelocity();
 		}
 
 		////////////////////////////////
