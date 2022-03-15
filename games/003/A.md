@@ -9,8 +9,10 @@ Vec2 IndexToPos(size_t i)
 	return{ (100.0 + i % 11 * 90), (100.0 + i / 11 * 130) };
 }
 
-// 現在の状態をチェックして, 同じ数字のカードが 2 枚オモテになっていたら
-// それらのカードをテーブル上に存在しない設定にする関数
+// 現在の状態をチェックしてカードが 2 枚オモテになっていたら
+// 同じ数字の場合: それらのカードをテーブル上に存在しない設定に
+// 異なる数字の場合: それらをウラに戻す
+// という操作をする関数
 void Update(Optional<size_t>& first, Optional<size_t>& second, Array<PlayingCard::Card>& cards, Array<bool>& cardsOntable)
 {
 	// まだ 2 枚めくっていない場合は何もしない
@@ -39,16 +41,17 @@ void Update(Optional<size_t>& first, Optional<size_t>& second, Array<PlayingCard
 		cards[*second].isFaceSide = false;
 	}
 
+    // 何もめくっていない状態にする
 	first.reset();
 	second.reset();
 }
 
 void Main()
 {
-	// ウィンドウを 1280x720 にリサイズ
+	// ウィンドウを 1280x720 にリサイズする
 	Window::Resize(1280, 720);
 
-	// 背景色を設定
+	// 背景色を設定する
 	Scene::SetBackground(Palette::Darkgreen);
 
 	// トランプカードのデータを初期化
@@ -59,7 +62,7 @@ void Main()
 	// 引数: ジョーカー 0 枚, 初期状態はウラ面
 	Array<PlayingCard::Card> cards = PlayingCard::CreateDeck(0, false);
 
-	// トランプを無作為にシャッフル
+	// トランプを無作為にシャッフルする
 	cards.shuffle();
 
 	// それぞれのカードがテーブル上に存在するかを記録する配列
@@ -87,7 +90,7 @@ void Main()
 		{
 			Update(first, second, cards, cardsOntable);
 
-			// ストップウォッチを初期状態に
+			// ストップウォッチを初期状態にする
 			timeFromSecond.reset();
 		}
 
@@ -97,13 +100,13 @@ void Main()
 			// 各カードについて、マウスカーソルが重なっていたときの処理
 			for (size_t i = 0; i < cards.size(); ++i)
 			{
-				// カードが存在しない場合はスキップ
+				// カードが存在しない場合はスキップする
 				if (not cardsOntable[i])
 				{
 					continue;
 				}
 
-				// すでにオモテを向いているカードはスキップ
+				// すでにオモテを向いているカードはスキップする
 				if (cards[i].isFaceSide)
 				{
 					continue;
@@ -118,7 +121,7 @@ void Main()
 				// カード上にマウスカーソルがあれば
 				if (region.mouseOver())
 				{
-					// マウスカーソルを手のアイコンに
+					// マウスカーソルを手のアイコンにする
 					Cursor::RequestStyle(CursorStyle::Hand);
 
 					// 左クリックしたら
@@ -134,7 +137,7 @@ void Main()
 							// 2 枚目にめくったカード
 							second = i;
 
-							// ストップウォッチを開始
+							// ストップウォッチを開始する
 							timeFromSecond.start();
 						}
 
@@ -157,7 +160,7 @@ void Main()
 		// 各カードについて
 		for (size_t i = 0; i < cards.size(); ++i)
 		{
-			// もう存在しない場合はスキップ
+			// もう存在しない場合はスキップする
 			if (not cardsOntable[i])
 			{
 				continue;
@@ -166,7 +169,7 @@ void Main()
 			// カードを描画する中心座標
 			const Vec2 center = IndexToPos(i);
 
-			// カードを描画
+			// カードを描画する
 			pack(cards[i]).drawAt(center);
 		}
 	}
