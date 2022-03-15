@@ -1,4 +1,4 @@
-# Siv3D ゲームプログラミング集
+# ゲーム典型 (C++ / Siv3D)
 
 様々なゲームのプログラムを C++ & Siv3D コードで書いていくプロジェクトです。すべての行にコメントが付いていて、学習の参考にしやすいコードになっています。コードのライセンスはパブリックドメインで、自由に再利用できます。
 
@@ -12,3 +12,11 @@
 | 002A | [タイピングゲーム](games/002/A.md) | ★1 | `TextInput::Update()` を活用しよう |
 | 003A | [神経衰弱](games/003/A.md) | ★3 | トランプの描画は `PlayingCard` |
 | 004A | [ハノイの塔](games/004/A.md) | ★2 | 配列を使ってコードを短くしよう |
+
+### 参考リンク
+- [Siv3D 公式リポジトリ](https://github.com/Siv3D/OpenSiv3D)
+- [Siv3D 公式サイト](https://siv3d.github.io/ja-jp/)
+- [Siv3D 公式リファレンス](https://zenn.dev/reputeless/books/siv3d-documentation)
+
+### 姉妹プロジェクト
+- [競プロ典型 90 問 練習 (C++17)](https://github.com/Reputeless/tenkei_90)
