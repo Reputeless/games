@@ -147,7 +147,7 @@ void Main()
 						cards[i].isFaceSide = true;
 					}
 
-					// これ以上処理するカードは無い
+					// これ以上処理する必要のあるカードは無い
 					break;
 				}
 			}
