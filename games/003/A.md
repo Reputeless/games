@@ -15,7 +15,7 @@ Vec2 IndexToPos(size_t i)
 // 同じ数字の場合: それらのカードをテーブル上に存在しない設定に
 // 異なる数字の場合: それらをウラに戻す
 // という操作をする関数
-void Update(Optional<size_t>& first, Optional<size_t>& second, Array<PlayingCard::Card>& cards, Array<bool>& cardsOntable)
+void Update(Optional<size_t>& first, Optional<size_t>& second, Array<PlayingCard::Card>& cards, Array<bool>& cardsOnTable)
 {
 	// まだ 2 枚めくっていない場合は何もしない
 	if ((not first) || (not second))
@@ -33,8 +33,8 @@ void Update(Optional<size_t>& first, Optional<size_t>& second, Array<PlayingCard
 	if (card1.rank == card2.rank)
 	{
 		// 2 枚のカードをテーブル上に存在しない設定にする
-		cardsOntable[*first] = false;
-		cardsOntable[*second] = false;
+		cardsOnTable[*first] = false;
+		cardsOnTable[*second] = false;
 	}
 	else
 	{
@@ -68,7 +68,7 @@ void Main()
 	cards.shuffle();
 
 	// それぞれのカードがテーブル上に存在するかを記録する配列
-	Array<bool> cardsOntable(cards.size(), true);
+	Array<bool> cardsOnTable(cards.size(), true);
 
 	// 1 枚目としてめくったカードのインデックス
 	Optional<size_t> first;
@@ -90,7 +90,7 @@ void Main()
 		// 2 枚目をめくってから 1 秒以上経過したら
 		if (1.0s <= timeFromSecond)
 		{
-			Update(first, second, cards, cardsOntable);
+			Update(first, second, cards, cardsOnTable);
 
 			// ストップウォッチを初期状態にする
 			timeFromSecond.reset();
@@ -103,7 +103,7 @@ void Main()
 			for (size_t i = 0; i < cards.size(); ++i)
 			{
 				// カードが存在しない場合はスキップする
-				if (not cardsOntable[i])
+				if (not cardsOnTable[i])
 				{
 					continue;
 				}
@@ -163,7 +163,7 @@ void Main()
 		for (size_t i = 0; i < cards.size(); ++i)
 		{
 			// もう存在しない場合はスキップする
-			if (not cardsOntable[i])
+			if (not cardsOnTable[i])
 			{
 				continue;
 			}
