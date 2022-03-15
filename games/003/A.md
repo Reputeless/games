@@ -43,7 +43,7 @@ void Update(Optional<size_t>& first, Optional<size_t>& second, Array<PlayingCard
 		cards[*second].isFaceSide = false;
 	}
 
-    // 何もめくっていない状態にする
+	// 何もめくっていない状態にする
 	first.reset();
 	second.reset();
 }
