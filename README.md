@@ -16,7 +16,7 @@
 | 002A | [タイピングゲーム](games/002/A.md) | ★1 | `TextInput::Update()` を活用しよう |
 | 003A | [神経衰弱](games/003/A.md) | ★3 | トランプの描画は `PlayingCard` |
 | 004A | [ハノイの塔](games/004/A.md) | ★2 | 配列を使ってコードを短くしよう |
-| 005A | [2D 物理演算による破壊ゲーム](games/005/A.md) (Angry Birds など) | ★2 | `P2Body::setVelocity()` で発射速度を設定 |
+| 005A | [2D 物理演算による破壊ゲーム](games/005/A.md) (Angry Birds など) | ★3 | `P2Body::setVelocity()` で発射速度を設定 |
 
 ### 参考リンク
 - [Siv3D 公式リポジトリ](https://github.com/Siv3D/OpenSiv3D)
