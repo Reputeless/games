@@ -1,6 +1,6 @@
-# 2D 物理演算による破壊ゲーム
+# 2D 物理演算による破壊ゲーム - 予測軌道を描く
 
-![](A.png)
+![](B.png)
 
 ```cpp
 # include <Siv3D.hpp> // OpenSiv3D v0.6.3
@@ -185,6 +185,27 @@ void Main()
 				Line{ ballPos, (ballPos + ballDelta) }
 					.stretched(-10)
 					.drawArrow(10, { 20, 20 }, ColorF{ 1.0, 0.0, 0.0, 0.5 });
+			}
+
+			// ボールの予測軌道を描く
+			if (not ballDelta.isZero())
+			{
+				// 発射速度
+				const Vec2 v0 = (ballDelta * 8);
+
+				// 0.15 秒区切りで 10 地点を表示
+				for (int32 i = 1; i <= 10; ++i)
+				{
+					const double t = (i * 0.15);
+
+					// t 秒後の位置（等加速度運動の式）
+					const Vec2 pos = ballPos + (v0 * t) + (0.5 * world.getGravity() * t * t);
+
+					// 予測地点を描く
+					Circle{ pos, 6 }
+						.draw(ColorF{ 1.0, 0.6 })
+						.drawFrame(3);
+				}
 			}
 		}
 	}
