@@ -18,7 +18,7 @@
 | 004A | [ハノイの塔](games/004/A.md) | ★2 | 配列を使ってコードを短くしよう |
 | 005A | [2D 物理演算による破壊ゲーム](games/005/A.md) (Angry Birds など) | ★3 | `P2Body::setVelocity()` で発射速度を設定 |
 | 005B | [2D 物理演算による破壊ゲーム - 予測軌道を表示](games/005/B.md) | ★3 | 物理演算機能に頼らない方法もある |
-| 006A | [Wheel of Fortune (ルーレット)](games/006/A.md) | ★2 | 結果につじつまを合わせよう |
+| 006A | [Wheel of Fortune (ルーレット)](games/006/A.md) | ★3 | 結果につじつまを合わせよう |
 
 ### 参考リンク
 - [Siv3D 公式リポジトリ](https://github.com/Siv3D/OpenSiv3D)
