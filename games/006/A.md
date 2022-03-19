@@ -43,11 +43,14 @@ void DrawWheel(double angle, const Array<Segment>& segments, const Font& font)
 	// 各セグメントを描く
 	for (const auto& segment : segments)
 	{
+		// セグメントを描く
 		Wheel.drawPie(angle + segment.startAngle, segment.angle, segment.color);
 
 		{
+			// 回転角度に応じてテキスト描画を回転させる
 			const Transformer2D tr{ Mat3x2::Rotate(segment.startAngle + segment.angle * 0.5 + angle - 90_deg, Wheel.center) };
 
+			// 輪郭付きでテキストを描く
 			font(segment.text).draw(TextStyle::Outline(0.25, ColorF{ 0.1 }), segment.fontSize, Arg::rightCenter = Wheel.center.movedBy(Wheel.r - 10, 0));
 		}
 	}
@@ -175,29 +178,29 @@ void Main()
 
 		if (stopwatch < WarmupTime) // ウォームアップ時間が経過していない場合
 		{
-			// 「Start」ボタンを表示
+			// 「Start」ボタンを表示する
 			// stopwatch が開始していない時だけ押せる
 			if (SimpleGUI::Button(U"Start", Vec2{ 580, 40 }, 160, (not stopwatch.isRunning())))
 			{
-				// 回転を開始してからの経過時間を測定開始
+				// 回転を開始してからの経過時間を測定開始する
 				stopwatch.restart();
 			}
 		}
 		else
 		{
-			// 「Stop」ボタンを表示
+			// 「Stop」ボタンを表示する
 			if (SimpleGUI::Button(U"Stop", Vec2{ 580, 40 }, 160, (not targetAngle)))
 			{
-				// 確率に基づき抽選結果を決定
+				// 確率に基づき抽選結果を決定する
 				const size_t selected = distribution(GetDefaultRNG());
 
-				// 抽選結果に合うセグメントの角度範囲を取得
+				// 抽選結果に合うセグメントの角度範囲を取得する
 				const auto [min, max] = segments[selected].getArea(Epsilon);
 
-				// 抽選結果に合う角度をランダムに決定
+				// 抽選結果に合う角度をランダムに決定する
 				const double result = Random(min, max);
 
-				// 抽選結果に合う最終的な回転角度を計算
+				// 抽選結果に合う最終的な回転角度を計算する
 				// (現在の回転角度) + (360° までの角度) + (抽選結果を指すための回転角度) + (余分な周回 (360° の倍数))
 				targetAngle = angle + (360_deg - Fmod(angle, 360_deg)) + (360_deg - result) + (360_deg * 1);
 
