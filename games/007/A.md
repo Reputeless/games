@@ -3,7 +3,7 @@
 ![](A.png)
 
 必要なファイル
-- マップチップファイル: [ぴぽや倉庫](https://pipoya.net/sozai/assets/map-chip_tileset16/) の「320×240用マップチップ・タイル設定データ」をダウンロード
+- マップチップファイル: [ぴぽや倉庫](https://pipoya.net/sozai/assets/map-chip_tileset16/) から、「320×240用マップチップ・タイル設定データ」をダウンロード
   - ダウンロードした `mapchip2_0724.zip` を展開し、`MapChip` フォルダを `App` フォルダに配置
 - `layer0.csv` - 本ページに記載
 - `layer1.csv` - 本ページに記載
@@ -218,14 +218,14 @@ void Main()
 
 					// 最下層のマップチップ
 					if (const int32 chipIndex = mapLayer0[y][x];
-						chipIndex != 0)
+						chipIndex != 0) // 0 の場合は描画しない
 					{
 						mapchip.get(chipIndex).draw(pos);
 					}
 
 					// 1 段上のマップチップ
 					if (const int32 chipIndex = mapLayer1[y][x];
-						chipIndex != 0)
+						chipIndex != 0) // 0 の場合は描画しない
 					{
 						mapchip.get(chipIndex).draw(pos);
 					}
@@ -276,7 +276,6 @@ void Main()
 		}
 	}
 }
-
 ```
 
 ---
