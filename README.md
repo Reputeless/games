@@ -30,8 +30,8 @@
 ### サムネイル画像から探す
 |  |  |  |  |
 |:---:|:---:|:---:|:---:|
-|<img src="https://raw.githubusercontent.com/Reputeless/games/main/games/001/B.png" width="120px"><br>001B|<img src="https://raw.githubusercontent.com/Reputeless/games/main/games/002/A.png" width="120px"><br>002A|<img src="https://raw.githubusercontent.com/Reputeless/games/main/games/003/A.png" width="120px"><br>003A|<img src="https://raw.githubusercontent.com/Reputeless/games/main/games/004/A.png" width="120px"><br>004A|
-|<img src="https://raw.githubusercontent.com/Reputeless/games/main/games/005/B.png" width="120px"><br>005B|<img src="https://raw.githubusercontent.com/Reputeless/games/main/games/006/A.png" width="120px"><br>006A|<img src="https://raw.githubusercontent.com/Reputeless/games/main/games/007/A.png" width="120px"><br>007A|<img src="https://raw.githubusercontent.com/Reputeless/games/main/games/008/D.png" width="120px"><br>008D|
+|<a href="games/001/B.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/001/B.png" width="144px"></a><br>001B|<a href="games/002/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/002/A.png" width="144px"></a><br>002A|<a href="games/003/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/003/A.png" width="144px"></a><br>003A|<a href="games/004/B.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/004/A.png" width="144px"></a><br>004A|
+|<a href="games/005/B.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/005/B.png" width="144px"></a><br>005B|<a href="games/006/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/006/A.png" width="144px"></a><br>006A|<a href="games/007/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/007/A.png" width="144px"></a><br>007A|<a href="games/008/D.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/008/D.png" width="144px"></a><br>008D|
 
 
 ### 参考リンク
