@@ -174,10 +174,10 @@ void DrawBlock(const Rect& rect)
 void DrawGame(const Grid<int32>& grid, const Grid<CellState>& states, const Font& font, const Texture& bombTexture, const Texture& flagTexture, const Point& gamePos, const Size& cellSize)
 {
 	// 0～8 の数字の色
-	constexpr ColorF NumberColors[8] =
+	constexpr ColorF NumberColors[9] =
 	{
 		ColorF{ 0, 0, 0 }, ColorF{ 0, 0, 1 }, ColorF{ 0, 0.5, 0 }, ColorF{ 1, 0, 0 },
-		ColorF{ 0, 0, 0.5 }, ColorF{ 0.5, 0, 0 }, ColorF{ 0.5, 0, 0 }, ColorF{ 0.5, 0, 0 }
+		ColorF{ 0, 0, 0.5 }, ColorF{ 0.5, 0, 0 }, ColorF{ 0.5, 0, 0 }, ColorF{ 0.5, 0, 0 }, ColorF{ 0.5, 0, 0 }
 	};
 
 	// すべてのマスについて
