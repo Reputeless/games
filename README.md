@@ -26,23 +26,24 @@
 | 008C | [マインスイーパーのマスを開く](games/008/C.md) | ★4 | 仕事を複数の関数に分割しよう |
 | **008D** | [マインスイーパー](games/008/D.md) | ★4 | ゲームオーバーとゲームクリアの状態を持とう |
 
+
 ### ゲームの部品一覧
 | 番号 | 部品 | 説明 |
-|:---:|:---|:---:|
-| W-001A | [結果のツイートボタン](widgets/001/A.md) | ゲームの結果をハッシュタグや URL 付きでツイートできるようにし、SNS 上でプレイヤーを可視化・ゲームを拡散しやすくします |
+|:---:|:---|:---|
+| W001A | [結果のツイートボタン](widgets/001/A.md) | ゲームの結果をハッシュタグや URL 付きでツイートできるようにし、SNS 上でプレイヤーを可視化・ゲームを拡散しやすくします |
 
 
-### サムネイル画像からゲームを探す
+### サムネイルからゲームを探す
 |  |  |  |  |
 |:---:|:---:|:---:|:---:|
 |<a href="games/001/B.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/001/B.png" width="180px"></a><br>001B|<a href="games/002/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/002/A.png" width="180px"></a><br>002A|<a href="games/003/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/003/A.png" width="180px"></a><br>003A|<a href="games/004/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/004/A.png" width="180px"></a><br>004A|
 |<a href="games/005/B.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/005/B.png" width="180px"></a><br>005B|<a href="games/006/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/006/A.png" width="180px"></a><br>006A|<a href="games/007/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/007/A.png" width="180px"></a><br>007A|<a href="games/008/D.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/games/008/D.png" width="180px"></a><br>008D|
 
 
-### サムネイル画像からゲームの部品を探す
+### サムネイルからゲームの部品を探す
 |  |  |  |  |
 |:---:|:---:|:---:|:---:|
-|<a href="widgets/001/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/widgets/001/A.png" width="180px"></a><br>W-001A| | | |
+|<a href="widgets/001/A.md"><img src="https://raw.githubusercontent.com/Reputeless/games/main/widgets/001/A.png" width="180px"></a><br>W001A| | | |
 
 
 ### 参考リンク
