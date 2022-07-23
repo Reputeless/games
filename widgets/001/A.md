@@ -1,6 +1,6 @@
 # 結果をツイートするボタン
 
-![](A.png)
+![](A.png) ![](A2.png)
 
 ```cpp
 # include <Siv3D.hpp> // OpenSiv3D v0.6.4
