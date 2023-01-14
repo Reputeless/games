@@ -235,10 +235,16 @@ void OpenGroup(const Grid<int32>& grid, Grid<CellState>& states, const int32 gro
 				{
 					const Point neighbor = (Point{ x, y } + offset);
 
-					// 盤面の範囲内であれば, そのマスも開く
-					if (grid.inBounds(neighbor))
+					// 盤面の範囲内かつ未開放であれば, そのマスも開く
+					if (grid.inBounds(neighbor) && (not states[neighbor].opened))
 					{
 						states[neighbor].opened = true;
+
+						// それが異なる島番号の数字のないマス (0) であれば, 再帰的にそれらも開く
+						if ((grid[neighbor] == 0) && (groupIndex != states[neighbor].groupIndex))
+						{
+							OpenGroup(grid, states, states[neighbor].groupIndex);
+						}
 					}
 				}
 			}
